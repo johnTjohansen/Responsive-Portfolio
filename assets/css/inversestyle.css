@@ -4,7 +4,7 @@ body {
   color: #777;
   line-height: 34px;
   background: url("../images/cork-wallet.png");
-  width: 980px;
+  width: 640px;
 }
 
 * {
@@ -22,9 +22,11 @@ html, body {
 }
 
 .wrapper {
+  clear: both;	
   min-height: 100%;
+  width: 100%;
   height: auto !important;
-  margin: 0 auto -105px;
+  margin: 0 auto;
 }
 
 footer, .push {
@@ -52,7 +54,7 @@ nav a:hover {
 /* general styling */
 
 .container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   clear: both;
 }
@@ -96,7 +98,7 @@ h2, h3 {
 }
 
 #logo {
-  width: 250px;
+  width: 640px;
   height: 90px;
   float: left;
   font-family: 'Georgia', Times, Times New Roman, serif;
@@ -110,8 +112,9 @@ h2, h3 {
 }
 
 nav {
-  float: right;
+  text-align: center;
   margin-top: 25px;
+  width: 100%;
 }
 
 nav a {
@@ -133,7 +136,6 @@ nav a:first-child {
 footer {
   padding: 30px 0;
   clear: both;
-  color: #fff;
   color: #ccc;
   font-size: 12px;
   text-align: center;
@@ -148,7 +150,6 @@ footer {
   margin-bottom: 20px;
   padding: 30px;
   width: 100%;
-  max-width: 270px;
   background: #fff;
   border: 1px solid #ddd;
 }
@@ -163,7 +164,7 @@ h3, .sidebar h2 {
 .social {
   margin-top: 8px;
   margin-right: 5px;
-  width: 62px;
+  width: 100%;
   height: 62px;
 }
 
@@ -175,6 +176,7 @@ h3, .sidebar h2 {
 
 #main-container {
   padding-top: 130px;
+  width: 600px;
 }
 
 .main-section {
@@ -221,11 +223,10 @@ h3, .sidebar h2 {
 }
 
 .auth-image {
-  width: 200px;
+  width: 80%;
   height: auto;
   margin-top: 10px;
-  margin-right: 25px;
-  float: left;
+  padding-left: 25px;
 }
 
 /* contact page */
@@ -268,84 +269,64 @@ input[type=submit] {
   border: 0 none;
 }
 
-/* style modifications for the 768px screen */
+  /* Width at 768px and below */
 @media screen and (max-width: 768px) {
 
-  body {
-    width: 768px;
+  body { 
+    max-width: 768px;
   }
 
-  nav a {
-    font-size: 14px;
-    margin: 0 auto;
-    text-align: center;
-  }
- 
   #logo {
-    text-align: center;
+  	width: 250px;
   }
 
-  .sidebar {
-    float: left;
-  }
-
-/* style modifications for the 640px screen */
-@media screen and (max-width: 640px) {
-
-  body {
-    width: 640px;
-  }
-
-  .main-section {
-    float: none;
-    width: 90%;
-    margin: 0 0 20px 0;
+  nav {
+  	float: right;
   }
 
   .wrapper {
+    /* Box-model */
     width: 100%;
-    margin: 0 20px;
+    padding: 20px;
   }
+
   .auth-image {
-    float: none;
-    width: 70%;
-    padding: 0 55px;
-    margin: 0 55px;
-    align-items: center;
-  }
-  nav {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+    width: 50%;
   }
 
-  nav a {
-    font-size: 14px;
-    padding: 10px 50px;
-    margin: 0 auto;
-  }
- 
-  #logo {
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-  }
+  #main-content,
+  #sidebar { width: 100%; }
 
-  .sidebar {
-    max-width: 600px;
-    width: 90%;
-    float: none;
-  }
-
-   footer .push {
-    height: 30px;
-  }
-
-  footer {
-    padding-top: 25px;
-    text-align: center;
-    width: 100%;
+  #sidebar { 
+  	margin-top: 40px;
   }
 
 }
+
+  /* Width at 980px and above */
+@media screen and (max-width: 980px) {
+
+  body { max-width: 980px; }
+
+  #logo {width: 250px;}
+
+  nav {
+  	float: right;
+  }
+
+  .wrapper { width: 600px; }
+
+  .auth-image {
+    width: 200px;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+
+  .sidebar {
+    float: right;
+    max-width: 270px;
+  }
+
+  .social {
+    width: 62px;
+  }  
