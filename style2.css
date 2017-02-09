@@ -22,11 +22,9 @@ html, body {
 }
 
 .wrapper {
-  clear: both;	
   min-height: 100%;
-  width: 100%;
   height: auto !important;
-  margin: 0 auto;
+  margin: 0 auto -105px;
 }
 
 footer, .push {
@@ -54,7 +52,7 @@ nav a:hover {
 /* general styling */
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   clear: both;
 }
@@ -98,8 +96,8 @@ h2, h3 {
 }
 
 #logo {
-  width: 640px;
-  height: 90px;
+  width: 100%;
+  height: 60px;
   float: left;
   font-family: 'Georgia', Times, Times New Roman, serif;
   font-size: 30px;
@@ -107,14 +105,13 @@ h2, h3 {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  line-height: 90px;
+  line-height: 60px;
   background: #4aaaa5;
 }
 
 nav {
-  text-align: center;
+  float: right;
   margin-top: 25px;
-  width: 100%;
 }
 
 nav a {
@@ -136,6 +133,7 @@ nav a:first-child {
 footer {
   padding: 30px 0;
   clear: both;
+  color: #fff;
   color: #ccc;
   font-size: 12px;
   text-align: center;
@@ -150,6 +148,7 @@ footer {
   margin-bottom: 20px;
   padding: 30px;
   width: 100%;
+  max-width: 270px;
   background: #fff;
   border: 1px solid #ddd;
 }
@@ -164,7 +163,7 @@ h3, .sidebar h2 {
 .social {
   margin-top: 8px;
   margin-right: 5px;
-  width: 100%;
+  width: 62px;
   height: 62px;
 }
 
@@ -176,7 +175,6 @@ h3, .sidebar h2 {
 
 #main-container {
   padding-top: 130px;
-  width: 600px;
 }
 
 .main-section {
@@ -189,7 +187,6 @@ h3, .sidebar h2 {
 }
 
 /* portfolio page */
-
 .work {
   position: relative;
   width: 274px;
@@ -223,14 +220,14 @@ h3, .sidebar h2 {
 }
 
 .auth-image {
-  width: 80%;
+  width: 200px;
   height: auto;
   margin-top: 10px;
-  padding-left: 25px;
+  margin-right: 25px;
+  float: left;
 }
 
 /* contact page */
-
 #contact-form ul {
   margin-bottom: 20px;
 }
@@ -269,64 +266,35 @@ input[type=submit] {
   border: 0 none;
 }
 
-  /* Width at 768px and below */
-@media screen and (max-width: 768px) {
+/* style modifications for the 768px screen */
+@media screen and (max-width: 768px and min-width: 641) {
 
-  body { 
-    max-width: 768px;
+  body {
+    width: 768px;
   }
+
+/* style modifications for the 980px screen */
+@media screen and (max-width: 980px and min-width: 769) {
+
+  body {
+    width: 980px;
+  }
+
+  nav {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 10px 50px;
+    margin: 0 auto;
+  }
+
 
   #logo {
-  	width: 250px;
+    width: 270px;
+    height: 90px;
+    line-height: 90px;
   }
-
-  nav {
-  	float: right;
-  }
-
-  .wrapper {
-    /* Box-model */
-    width: 100%;
-    padding: 20px;
-  }
-
-  .auth-image {
-    width: 50%;
-  }
-
-  #main-content,
-  #sidebar { width: 100%; }
-
-  #sidebar { 
-  	margin-top: 40px;
-  }
-
-}
-
-  /* Width at 980px and above */
-@media screen and (max-width: 980px) {
-
-  body { max-width: 980px; }
-
-  #logo {width: 250px;}
-
-  nav {
-  	float: right;
-  }
-
-  .wrapper { width: 600px; }
-
-  .auth-image {
-    width: 200px;
-    margin-top: 10px;
-    margin-right: 25px;
-  }
-
-  .sidebar {
-    float: right;
-    max-width: 270px;
-  }
-
-  .social {
-    width: 62px;
-  }  

@@ -1,10 +1,11 @@
+/* Starting with styles for 640px max screen */
 body {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 18px;
   color: #777;
   line-height: 34px;
   background: url("../images/cork-wallet.png");
-  width: 980px;
+  width: 640px;
 }
 
 * {
@@ -24,11 +25,12 @@ html, body {
 .wrapper {
   min-height: 100%;
   height: auto !important;
-  margin: 0 auto -105px;
+  width: 100%;
+  margin: 0 20px;
 }
 
-footer, .push {
-  height: 105px;
+footer .push {
+  height: 30px;
 }
 
 /* end sticky footer */
@@ -96,8 +98,8 @@ h2, h3 {
 }
 
 #logo {
-  width: 250px;
-  height: 90px;
+  width: 100%;
+  height: 60px;
   float: left;
   font-family: 'Georgia', Times, Times New Roman, serif;
   font-size: 30px;
@@ -105,23 +107,28 @@ h2, h3 {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  line-height: 90px;
+  line-height: 60px;
   background: #4aaaa5;
 }
 
 nav {
-  float: right;
-  margin-top: 25px;
+  float: none;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
 }
 
 nav a {
   display: inline-block;
-  margin-left: 15px;
-  padding-left: 15px;
+  padding: 10px 50px;
+  margin: 0 auto;
   color: #999;
   text-decoration: none;
   line-height: 18px;
   border-left: 1px solid #efefef;
+  font-size: 14px;
 }
 
 nav a:first-child {
@@ -144,11 +151,10 @@ footer {
 /* sidebar */
 
 .sidebar {
-  float: right;
+  float: none;
   margin-bottom: 20px;
   padding: 30px;
-  width: 100%;
-  max-width: 270px;
+  width: 90%;
   background: #fff;
   border: 1px solid #ddd;
 }
@@ -178,16 +184,15 @@ h3, .sidebar h2 {
 }
 
 .main-section {
-  float: left;
-  margin: 0 0 40px 0;
+  float: none;
+  margin: 0 0 20px 0;
   padding: 30px;
-  width: 100%;
+  width: 90%;
   background: #fff;
   border: 1px solid #ddd;
 }
 
 /* portfolio page */
-
 .work {
   position: relative;
   width: 274px;
@@ -221,15 +226,14 @@ h3, .sidebar h2 {
 }
 
 .auth-image {
-  width: 200px;
+  width: 70%;
   height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-  float: left;
+  padding: 0 55px;
+  margin: 0 60px;
+  float: none;
 }
 
 /* contact page */
-
 #contact-form ul {
   margin-bottom: 20px;
 }
@@ -269,83 +273,106 @@ input[type=submit] {
 }
 
 /* style modifications for the 768px screen */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 641px) {
 
   body {
     width: 768px;
   }
 
+  .wrapper {
+    width: 100%;
+    margin: 0 auto -105px;
+  }
+
+  #logo {
+    width: 250px;
+    height: 90px;
+    line-height: 90px;
+    float: left;
+  }
+
+  nav {
+    float: right;
+    width: 60%;
+  }
+
   nav a {
+  	margin-left: 15px;
+    padding-left: 15px;
     font-size: 14px;
     margin: 0 auto;
-    text-align: center;
   }
- 
-  #logo {
-    text-align: center;
+
+  .main-section {
+    float: left;
+    width: 640px;
+    margin: 0 0 40px 20px;
+  }
+
+  .auth-image {
+    width: 200px;
+    margin: 10px 15px 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
   }
 
   .sidebar {
     float: left;
+    width: 640px;
+    margin: 0 0 40px 20px;
+  }  
+
+  footer, .push {
+    height: 105px;
   }
 
-/* style modifications for the 640px screen */
-@media screen and (max-width: 640px) {
+}  
+
+/* style modifications for the 980px screen */
+@media screen and (min-width: 769px) {
 
   body {
-    width: 640px;
+    width: 980px;
+  }
+
+  nav {
+    float: right;
+    width: 60%;
+  }
+
+  nav a {
+  	margin-left: 15px;
+    padding-left: 15px;
+  }
+
+  #logo {
+    width: 250px;
+    height: 90px;
+    line-height: 90px;
   }
 
   .main-section {
-    float: none;
-    width: 90%;
-    margin: 0 0 20px 0;
+    float: left;
+    width: 640px;
+    margin: 0 0 40px 20px;
   }
 
   .wrapper {
     width: 100%;
-    margin: 0 20px;
-  }
-  .auth-image {
-    float: none;
-    width: 70%;
-    padding: 0 55px;
-    margin: 0 55px;
-    align-items: center;
-  }
-  nav {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+    margin: 0 auto -105px;
   }
 
-  nav a {
-    font-size: 14px;
-    padding: 10px 50px;
-    margin: 0 auto;
-  }
- 
-  #logo {
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
+  .auth-image {
+    width: 200px;
+    margin: 10px 15px 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
   }
 
   .sidebar {
-    max-width: 600px;
-    width: 90%;
-    float: none;
-  }
-
-   footer .push {
-    height: 30px;
-  }
-
-  footer {
-    padding-top: 25px;
-    text-align: center;
-    width: 100%;
-  }
-
-}
+    float: right;
+    width: 270px;
+  }  
+}  
