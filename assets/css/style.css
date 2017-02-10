@@ -198,7 +198,7 @@ h3, .sidebar h2 {
   width: 274px;
   overflow: auto;
   float: left;
-  margin: 20px 0 25px;
+  margin: 20px 120px 25px;
 }
 
 .work:nth-child(even) {
@@ -327,6 +327,11 @@ input[type=submit] {
     height: 105px;
   }
 
+  .work {
+    width: 45%;
+    margin: 20px 0 20px;
+  }
+
 }  
 
 /* style modifications for the 980px screen */
@@ -375,4 +380,10 @@ input[type=submit] {
     float: right;
     width: 270px;
   }  
+
+  .work {
+    width: 45%;
+    margin: 20px 0 25px;
+  }
+
 }  
